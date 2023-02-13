@@ -6,7 +6,6 @@ class NewsSourceButton extends StatefulWidget {
 
   final String newsSource;
 
-
   const NewsSourceButton({
     super.key, required this.newsSource,
   });
@@ -20,9 +19,9 @@ class _NewsSourceButtonState extends State<NewsSourceButton> {
   Color backgroundColor = Colors.white;
   Color textColor = darkBlue;
 
+
   @override
   Widget build(BuildContext context) {
-
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: OutlinedButton(
