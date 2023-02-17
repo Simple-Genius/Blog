@@ -18,7 +18,7 @@ class _NewsSourceButtonState extends State<NewsSourceButton> {
 
   Color backgroundColor = Colors.white;
   Color textColor = darkBlue;
-  String selectedCard = 'Comedy';
+  String selectedCard = 'Adventure';
 
 
 
