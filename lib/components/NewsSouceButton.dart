@@ -18,35 +18,30 @@ class _NewsSourceButtonState extends State<NewsSourceButton> {
 
   Color backgroundColor = Colors.white;
   Color textColor = darkBlue;
-  String selectedCard = 'Adventure';
+  String selectedCard = '';
 
 
 
   @override
   Widget build(BuildContext context) {
-
-    void selectCard(){
-      selectedCard = widget.newsSource;
-    }
-
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: OutlinedButton(
         style: OutlinedButton.styleFrom(
-          backgroundColor: selectedCard == widget.newsSource ? darkBlue : Colors.white,
+          backgroundColor: selectedCard == widget.newsSource ? textColor : backgroundColor,
           shape:  RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30)
           ),
         ),
         onPressed: (){
           setState(() {
-            selectCard();
+            selectedCard = widget.newsSource;
           });
         },
         child:  Text(
          widget.newsSource,
           style:  TextStyle(
-              color: selectedCard == widget.newsSource ? Colors.white : darkBlue
+              color: selectedCard == widget.newsSource ? backgroundColor : textColor
           ),
         ),
       ),
