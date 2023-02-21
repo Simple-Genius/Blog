@@ -16,8 +16,6 @@ class NewsSourceButton extends StatefulWidget {
 
 class _NewsSourceButtonState extends State<NewsSourceButton> {
 
-  Color backgroundColor = Colors.white;
-  Color textColor = darkBlue;
   String selectedCard = '';
 
 
@@ -28,7 +26,7 @@ class _NewsSourceButtonState extends State<NewsSourceButton> {
       padding: const EdgeInsets.all(8.0),
       child: OutlinedButton(
         style: OutlinedButton.styleFrom(
-          backgroundColor: selectedCard == widget.newsSource ? textColor : backgroundColor,
+          backgroundColor: selectedCard == widget.newsSource ? darkBlue : Colors.white,
           shape:  RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30)
           ),
@@ -41,7 +39,7 @@ class _NewsSourceButtonState extends State<NewsSourceButton> {
         child:  Text(
          widget.newsSource,
           style:  TextStyle(
-              color: selectedCard == widget.newsSource ? backgroundColor : textColor
+              color: selectedCard == widget.newsSource ? Colors.white : darkBlue
           ),
         ),
       ),
