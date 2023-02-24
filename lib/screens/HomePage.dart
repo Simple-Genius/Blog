@@ -15,6 +15,8 @@ class _HomePageState extends State<HomePage> {
 
   final _controller = ValueNotifier<bool>(false);
 
+
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -26,7 +28,6 @@ class _HomePageState extends State<HomePage> {
           onPressed: (){},
         ),
         bottomNavigationBar: Container(
-          padding: EdgeInsets.symmetric(horizontal: 0),
           child: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
             selectedFontSize: 0,

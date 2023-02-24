@@ -6,8 +6,9 @@ class NewsSourceButton extends StatefulWidget {
 
   final String newsSource;
 
+
   const NewsSourceButton({
-    super.key, required this.newsSource,
+    super.key, required this.newsSource
   });
 
   @override
@@ -16,9 +17,7 @@ class NewsSourceButton extends StatefulWidget {
 
 class _NewsSourceButtonState extends State<NewsSourceButton> {
 
-  String selectedCard = '';
-
-
+  bool isSelected = true;
 
   @override
   Widget build(BuildContext context) {
@@ -26,20 +25,20 @@ class _NewsSourceButtonState extends State<NewsSourceButton> {
       padding: const EdgeInsets.all(8.0),
       child: OutlinedButton(
         style: OutlinedButton.styleFrom(
-          backgroundColor: selectedCard == widget.newsSource ? darkBlue : Colors.white,
+         backgroundColor: isSelected ? Colors.white : darkBlue,
           shape:  RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30)
           ),
         ),
         onPressed: (){
           setState(() {
-            selectedCard = widget.newsSource;
+
           });
         },
         child:  Text(
          widget.newsSource,
           style:  TextStyle(
-              color: selectedCard == widget.newsSource ? Colors.white : darkBlue
+              color: isSelected ? darkBlue : Colors.white
           ),
         ),
       ),
