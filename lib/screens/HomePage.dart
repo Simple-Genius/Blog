@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
 
   final _controller = ValueNotifier<bool>(false);
 
-
+  List<String> newsSource = ['Comedy', 'Adventure', 'Cosmos', 'Sports', 'Entertainment'];
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
                           activeColor: Colors.grey,
                           activeChild: const Icon(Icons.sunny, color: darkBlue,),
                           inactiveColor: const Color(0xFF08142e),
-                          inactiveChild: FaIcon(FontAwesomeIcons.moon, color: Colors.white,),
+                          inactiveChild: const FaIcon(FontAwesomeIcons.moon, color: Colors.white,),
                         ),
 
                         IconButton(onPressed: (){}, icon: const Icon(Icons.search_outlined,color: darkBlue),),
