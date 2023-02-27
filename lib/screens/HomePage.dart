@@ -17,6 +17,14 @@ class _HomePageState extends State<HomePage> {
 
   List<String> newsSource = ['Comedy', 'Adventure', 'Cosmos', 'Sports', 'Entertainment'];
 
+  List<NewsSourceButton> buildButtons(){
+    List<NewsSourceButton> buttons = [];
+    for(int i = 0; i < newsSource.length; i++){
+      buttons.add(NewsSourceButton(newsSource: newsSource[i]));
+    }
+    return buttons;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -24,20 +32,18 @@ class _HomePageState extends State<HomePage> {
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.deepPurple,
-          child: Icon(Icons.add),
+          child: const Icon(Icons.add),
           onPressed: (){},
         ),
-        bottomNavigationBar: Container(
-          child: BottomNavigationBar(
-            type: BottomNavigationBarType.fixed,
-            selectedFontSize: 0,
-            items: const <BottomNavigationBarItem> [
-              BottomNavigationBarItem(icon: Icon(Elusive.home, color: Colors.black,), label: ''),
-              BottomNavigationBarItem(icon: Icon(Elusive.heart_circled,color: Colors.black), label: ''),
-              BottomNavigationBarItem(icon: Icon(Icons.notifications,color: Colors.black), label: ''),
-              BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.sliders,color: Colors.black), label: ''),
-            ],
-          ),
+        bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          selectedFontSize: 0,
+          items: const <BottomNavigationBarItem> [
+            BottomNavigationBarItem(icon: Icon(Elusive.home, color: Colors.black,), label: ''),
+            BottomNavigationBarItem(icon: Icon(Elusive.heart_circled,color: Colors.black), label: ''),
+            BottomNavigationBarItem(icon: Icon(Icons.notifications,color: Colors.black), label: ''),
+            BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.sliders,color: Colors.black), label: ''),
+          ],
         ),
         body: Container(
           color: const Color(0xFFFDFDFD),
@@ -90,13 +96,7 @@ class _HomePageState extends State<HomePage> {
                 child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
-                    children: const [
-                      NewsSourceButton(newsSource: 'Comedy'),
-                      NewsSourceButton(newsSource: 'Adventure'),
-                      NewsSourceButton(newsSource: 'Cosmos'),
-                      NewsSourceButton(newsSource: 'Sports'),
-                      NewsSourceButton(newsSource: 'Entertainment')
-                    ],
+                    children: buildButtons()
                   ),
                 ),
               ),

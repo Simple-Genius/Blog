@@ -8,7 +8,7 @@ class NewsSourceButton extends StatefulWidget {
 
 
   const NewsSourceButton({
-    super.key, required this.newsSource
+    super.key, required this.newsSource,
   });
 
   @override
@@ -17,7 +17,7 @@ class NewsSourceButton extends StatefulWidget {
 
 class _NewsSourceButtonState extends State<NewsSourceButton> {
 
-  bool isSelected = true;
+
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class _NewsSourceButtonState extends State<NewsSourceButton> {
       padding: const EdgeInsets.all(8.0),
       child: OutlinedButton(
         style: OutlinedButton.styleFrom(
-         backgroundColor: isSelected ? Colors.white : darkBlue,
+        // backgroundColor: widget.isSelected ? Colors.white : darkBlue,
           shape:  RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30)
           ),
@@ -38,7 +38,7 @@ class _NewsSourceButtonState extends State<NewsSourceButton> {
         child:  Text(
          widget.newsSource,
           style:  TextStyle(
-              color: isSelected ? darkBlue : Colors.white
+             // color: widget.is ? darkBlue : Colors.white
           ),
         ),
       ),
