@@ -4,6 +4,8 @@ import 'package:fluttericon/elusive_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../components/NewsSouceButton.dart';
 import '../constants.dart';
+
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -24,6 +26,8 @@ class _HomePageState extends State<HomePage> {
     }
     return buttons;
   }
+
+  int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -313,4 +317,6 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
+
 

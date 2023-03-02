@@ -6,7 +6,6 @@ class NewsSourceButton extends StatefulWidget {
 
   final String newsSource;
 
-
   const NewsSourceButton({
     super.key, required this.newsSource,
   });
@@ -16,7 +15,6 @@ class NewsSourceButton extends StatefulWidget {
 }
 
 class _NewsSourceButtonState extends State<NewsSourceButton> {
-
 
 
   @override
