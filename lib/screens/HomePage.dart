@@ -19,15 +19,25 @@ class _HomePageState extends State<HomePage> {
 
   List<String> newsSource = ['Comedy', 'Adventure', 'Cosmos', 'Sports', 'Entertainment'];
 
+  String tappedButtonName = '';
+
   List<NewsSourceButton> buildButtons(){
     List<NewsSourceButton> buttons = [];
     for(int i = 0; i < newsSource.length; i++){
-      buttons.add(NewsSourceButton(newsSource: newsSource[i]));
+      buttons.add(
+          NewsSourceButton(
+            buttonColor: tappedButtonName == newsSource[i] ? darkBlue : Colors.white,
+            newsSource: newsSource[i],
+            onPressed: (){
+              setState(() {
+                tappedButtonName = newsSource[i];
+              });
+            },
+            buttonTextColor: tappedButtonName == newsSource[i] ? Colors.white : darkBlue,)
+      );
     }
     return buttons;
   }
-
-  int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
