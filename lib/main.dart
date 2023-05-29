@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:blog_app/screens/DetailsPage.dart';
 import 'package:blog_app/screens/HomePage.dart';
 import 'package:flutter/material.dart';
@@ -7,7 +9,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp();
 
   // This widget is the root of your application.
   @override
@@ -18,8 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      home: const DetailsPage(),
     );
   }
 }
-

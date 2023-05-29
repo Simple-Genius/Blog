@@ -3,7 +3,7 @@
   "packages": [
     {
       "name": "async",
-      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/async-2.10.0",
+      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/async-2.11.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -15,7 +15,7 @@
     },
     {
       "name": "characters",
-      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/characters-1.2.1",
+      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/characters-1.3.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -27,15 +27,15 @@
     },
     {
       "name": "collection",
-      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/collection-1.17.0",
+      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/collection-1.17.1",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.18"
     },
     {
       "name": "crypto",
-      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/crypto-3.0.2",
+      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/crypto-3.0.3",
       "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "2.19"
     },
     {
       "name": "cupertino_icons",
@@ -57,7 +57,7 @@
     },
     {
       "name": "ffi",
-      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/ffi-2.0.1",
+      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/ffi-2.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -71,7 +71,7 @@
       "name": "flutter",
       "rootUri": "file:///Users/Boye/Downloads/flutter/packages/flutter",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "3.0"
     },
     {
       "name": "flutter_advanced_switch",
@@ -89,7 +89,7 @@
       "name": "flutter_test",
       "rootUri": "file:///Users/Boye/Downloads/flutter/packages/flutter_test",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "3.0"
     },
     {
       "name": "fluttericon",
@@ -99,21 +99,27 @@
     },
     {
       "name": "font_awesome_flutter",
-      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/font_awesome_flutter-10.3.0",
+      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/font_awesome_flutter-10.4.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "get",
+      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/get-4.6.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
     },
     {
       "name": "google_fonts",
-      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/google_fonts-4.0.1",
+      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/google_fonts-4.0.5",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.14"
     },
     {
       "name": "http",
-      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/http-0.13.5",
+      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/http-1.0.0",
       "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "3.0"
     },
     {
       "name": "http_parser",
@@ -123,19 +129,19 @@
     },
     {
       "name": "js",
-      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/js-0.6.5",
+      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/js-0.6.7",
       "packageUri": "lib/",
-      "languageVersion": "2.16"
+      "languageVersion": "2.19"
     },
     {
       "name": "lints",
-      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/lints-2.0.1",
+      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/lints-2.1.0",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "3.0"
     },
     {
       "name": "matcher",
-      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/matcher-0.12.13",
+      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/matcher-0.12.15",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -147,13 +153,13 @@
     },
     {
       "name": "meta",
-      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/meta-1.8.0",
+      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/meta-1.9.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "path",
-      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/path-1.8.2",
+      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/path-1.8.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -171,37 +177,37 @@
     },
     {
       "name": "path_provider",
-      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/path_provider-2.0.12",
+      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/path_provider-2.0.15",
       "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "2.17"
     },
     {
       "name": "path_provider_android",
-      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/path_provider_android-2.0.22",
+      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/path_provider_android-2.0.27",
       "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "2.17"
     },
     {
       "name": "path_provider_foundation",
-      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/path_provider_foundation-2.1.1",
+      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/path_provider_foundation-2.2.3",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.18"
     },
     {
       "name": "path_provider_linux",
-      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/path_provider_linux-2.1.7",
+      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/path_provider_linux-2.1.11",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.18"
     },
     {
       "name": "path_provider_platform_interface",
-      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/path_provider_platform_interface-2.0.5",
+      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/path_provider_platform_interface-2.0.6",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "path_provider_windows",
-      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/path_provider_windows-2.1.3",
+      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/path_provider_windows-2.1.6",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -213,9 +219,9 @@
     },
     {
       "name": "plugin_platform_interface",
-      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.3",
+      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.4",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.17"
     },
     {
       "name": "process",
@@ -227,7 +233,7 @@
       "name": "sky_engine",
       "rootUri": "file:///Users/Boye/Downloads/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.0"
     },
     {
       "name": "source_span",
@@ -261,15 +267,15 @@
     },
     {
       "name": "test_api",
-      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/test_api-0.4.16",
+      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/test_api-0.5.1",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "typed_data",
-      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/typed_data-1.3.1",
+      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/typed_data-1.3.2",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.17"
     },
     {
       "name": "vector_math",
@@ -279,24 +285,24 @@
     },
     {
       "name": "win32",
-      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/win32-3.1.3",
+      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/win32-4.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "xdg_directories",
-      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/xdg_directories-0.2.0+3",
+      "rootUri": "file:///Users/Boye/.pub-cache/hosted/pub.dev/xdg_directories-1.0.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.17"
     },
     {
       "name": "blog_app",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.18"
+      "languageVersion": "2.17"
     }
   ],
-  "generated": "2023-02-09T11:21:14.138977Z",
+  "generated": "2023-05-29T13:32:46.326437Z",
   "generator": "pub",
-  "generatorVersion": "2.19.0"
+  "generatorVersion": "3.0.2"
 }

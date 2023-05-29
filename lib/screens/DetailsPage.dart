@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_advanced_switch/flutter_advanced_switch.dart';
 import 'package:fluttericon/mfg_labs_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../constants.dart';
 import 'package:fluttericon/elusive_icons.dart';
+import 'package:blog_app/models/DetailsModel.dart';
+
+import '../controllers/detailsController.dart';
+
 
 class DetailsPage extends StatefulWidget {
   const DetailsPage({Key? key}) : super(key: key);
@@ -100,30 +105,33 @@ class _DetailsPageState extends State<DetailsPage> {
                     ),
                   ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: RichText(
-                    text: TextSpan(
-                      children: <TextSpan>[
-                        TextSpan(
-                          text: text[0][0],
-                          style: GoogleFonts.playfairDisplay(
-                              fontSize: 50,
-                              //fontWeight: FontWeight.bold,
-                              color: Colors.black
-                          )
-                        ),
-                        TextSpan(
-                          text: text.substring(1),
-                          style: GoogleFonts.playfairDisplay(
-                            color: Colors.black,
-                            fontSize: 15
-                          )
-                        )
-                      ]
+                GetX<DetailsController>(init: DetailsController(),
+                builder: (_){
+                  return Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: RichText(
+                      text: TextSpan(
+                          children: <TextSpan>[
+                            TextSpan(
+                                text: text.toString()[0][0],
+                                style: GoogleFonts.playfairDisplay(
+                                    fontSize: 50,
+                                    //fontWeight: FontWeight.bold,
+                                    color: Colors.black
+                                )
+                            ),
+                            TextSpan(
+                                text: text.substring(1),
+                                style: GoogleFonts.playfairDisplay(
+                                    color: Colors.black,
+                                    fontSize: 15
+                                )
+                            )
+                          ]
+                      ),
                     ),
-                  ),
-                ),
+                  );
+                },)
               ],
             ),
           ),

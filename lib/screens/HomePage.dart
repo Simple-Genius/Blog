@@ -1,7 +1,10 @@
+import 'package:blog_app/controllers/dataController.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_switch/flutter_advanced_switch.dart';
 import 'package:fluttericon/elusive_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import '../components/NewsSouceButton.dart';
 import '../constants.dart';
 
@@ -14,6 +17,15 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+
+  final dataController = Get.put(DataController());
+  @override
+  void initState() {
+    dataController.getData();
+    // TODO: implement initState
+    super.initState();
+  }
 
   final _controller = ValueNotifier<bool>(false);
 
@@ -125,23 +137,30 @@ class _HomePageState extends State<HomePage> {
                        child: Column(
                          children: [
                            Image.asset('images/a.jpg'),
-                           const Padding(
+                            Padding(
                              padding: EdgeInsets.all(5.0),
-                             child: Text('This is a man walking'),
+                             child: Text(
+                                 "${dataController?.newsModel!.title}",
+                               overflow: TextOverflow.ellipsis,
+                             ),
                            ),
                            Row(
-                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                             children: const [
-                               Text(
-                                 '24 Jun, 2021',
-                                 style: TextStyle(
-                                     fontSize: 12
-                                 ),
-                               ),
-                               Text(' 12 minute read',style: TextStyle(
-                                   fontSize: 12
-                               ),
-                               )
+                             mainAxisAlignment: MainAxisAlignment.spaceAround,
+                             children:  [
+                              GetBuilder<DataController>(builder: (_){
+                                return  Text(
+                                  "${dataController.newsModel!.time}",
+                                  style: TextStyle(
+                                      fontSize: 12
+                                  ),
+                                );
+                              },
+                              )
+
+                               // Text(' 12 minute read',style: TextStyle(
+                               //     fontSize: 12
+                               // ),
+                               // )
                              ],
                            )
                          ],
