@@ -50,6 +50,7 @@ class _DetailsPageState extends State<DetailsPage> {
                       child: Row(
                         children: [
                           FloatingActionButton.small(
+                            heroTag: null,
                             elevation: 2.0,
                             backgroundColor: Colors.white,
                             onPressed: () {  },
@@ -58,7 +59,9 @@ class _DetailsPageState extends State<DetailsPage> {
                           FloatingActionButton.small(
                             elevation: 2.0,
                             backgroundColor: Colors.white,
-                            onPressed: () {  },
+                            onPressed: () {
+
+                            },
                             child: const Icon(MfgLabs.heart, color: Colors.red,),
                           ),
                         ],
@@ -88,7 +91,9 @@ class _DetailsPageState extends State<DetailsPage> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           IconButton(
-                              onPressed: (){},
+                              onPressed: (){
+                                Navigator.pop(context);
+                              },
                               icon: const Icon(Icons.arrow_back, color: Colors.white,)
                           ),
                           AdvancedSwitch(

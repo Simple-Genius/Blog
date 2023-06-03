@@ -10,11 +10,10 @@ class DetailsController extends GetxController{
 
 
   var title = "Daily news".obs;
-  var body;
   getData() async {
     http.Response response = await http.get(Uri.parse(url));
 
-    print(response.statusCode);
+    //print(response.statusCode);
     if (response.statusCode == 200) {
       var data = jsonDecode(response.body);
       detailsModel = DetailsModel.fromJson(data).obs as DetailsModel?;

@@ -12,11 +12,10 @@ class DataController extends GetxController{
   getData() async {
    http.Response response = await http.get(Uri.parse(url));
 
-   print(response.statusCode);
    if (response.statusCode == 200) {
      var data = jsonDecode(response.body);
      newsModel = NewsModel.fromJson(data);
-     print(newsModel?.time);
+
    }
    else{
      print("There was an error here");

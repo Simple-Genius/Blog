@@ -1,4 +1,5 @@
 import 'package:blog_app/controllers/dataController.dart';
+import 'package:blog_app/screens/DetailsPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_switch/flutter_advanced_switch.dart';
 import 'package:fluttericon/elusive_icons.dart';
@@ -53,8 +54,13 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: Scaffold(
+
+    if (dataController.newsModel == null){
+      return const Center(child: CircularProgressIndicator());
+    }
+
+    return GetMaterialApp(
+      home: Scaffold(
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.deepPurple,
@@ -131,216 +137,90 @@ class _HomePageState extends State<HomePage> {
                    crossAxisCount: 2,
                  crossAxisSpacing: 10,
                  children: [
-                   Card(
-                     child:Padding(
-                       padding: const EdgeInsets.all(8.0),
-                       child: Column(
-                         children: [
-                           Image.asset('images/a.jpg'),
-                            Padding(
-                             padding: EdgeInsets.all(5.0),
-                             child: Text(
-                                 "${dataController?.newsModel!.title}",
-                               overflow: TextOverflow.ellipsis,
-                             ),
-                           ),
-                           Row(
-                             mainAxisAlignment: MainAxisAlignment.spaceAround,
-                             children:  [
-                              GetBuilder<DataController>(builder: (_){
-                                return  Text(
-                                  "${dataController.newsModel!.time}",
-                                  style: TextStyle(
-                                      fontSize: 12
-                                  ),
-                                );
-                              },
-                              )
-
-                               // Text(' 12 minute read',style: TextStyle(
-                               //     fontSize: 12
-                               // ),
-                               // )
-                             ],
-                           )
-                         ],
-                       ),
-                     ),
-                   ),
-                   Card(
-                     child:Padding(
-                       padding: const EdgeInsets.all(8.0),
-                       child: Column(
-                         children: [
-                           Image.asset('images/a.jpg'),
-                           const Padding(
-                             padding: EdgeInsets.all(5.0),
-                             child: Text('This is a man walking'),
-                           ),
-                           Row(
-                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                             children: const [
-                               Text(
-                                   '24 Jun, 2021',
-                                 style: TextStyle(
-                                   fontSize: 12
-                                 ),
-                               ),
-                               Text(' 12 minute read',style: TextStyle(
-                                   fontSize: 12
-                               ),)
-                             ],
-                           )
-                         ],
-                       ),
-                     ),
-                   ),
-                   Card(
-                     child:Padding(
-                       padding: const EdgeInsets.all(8.0),
-                       child: Column(
-                         children: [
-                           Image.asset('images/b.jpg'),
-                           const Padding(
-                             padding: EdgeInsets.all(5.0),
-                             child: Text('This is a man walking'),
-                           ),
-                           Row(
-                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                             children: const [
-                               Text(
-                                 '24 Jun, 2021',
-                                 style: TextStyle(
-                                     fontSize: 12
-                                 ),
-                               ),
-                               Text(' 12 minute read',style: TextStyle(
-                                   fontSize: 12
-                               ),)
-                             ],
-                           )
-                         ],
-                       ),
-                     ),
-                   ),
-                   Card(
-                     child:Padding(
-                       padding: const EdgeInsets.all(8.0),
-                       child: Column(
-                         children: [
-                           Image.asset('images/c.jpg'),
-                           const Padding(
-                             padding: EdgeInsets.all(5.0),
-                             child: Text('This is a man walking'),
-                           ),
-                           Row(
-                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                             children: const [
-                               Text(
-                                 '24 Jun, 2021',
-                                 style: TextStyle(
-                                     fontSize: 12
-                                 ),
-                               ),
-                               Text(' 12 minute read',style: TextStyle(
-                                   fontSize: 12
-                               ),)
-                             ],
-                           )
-                         ],
-                       ),
-                     ),
-                   ),
-                   Card(
-                     child:Padding(
-                       padding: const EdgeInsets.all(8.0),
-                       child: Column(
-                         children: [
-                           Image.asset('images/f.jpg'),
-                           const Padding(
-                             padding: EdgeInsets.all(5.0),
-                             child: Text('This is a man walking'),
-                           ),
-                           Row(
-                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                             children: const [
-                               Text(
-                                 '24 Jun, 2021',
-                                 style: TextStyle(
-                                     fontSize: 12
-                                 ),
-                               ),
-                               Text(' 12 minute read',style: TextStyle(
-                                   fontSize: 12
-                               ),)
-                             ],
-                           )
-                         ],
-                       ),
-                     ),
-                   ),
-                   Card(
-                     child:Padding(
-                       padding: const EdgeInsets.all(8.0),
-                       child: Column(
-                         children: [
-                           Image.asset('images/e.jpg'),
-                           const Padding(
-                             padding: EdgeInsets.all(5.0),
-                             child: Text('This is a man walking'),
-                           ),
-                           Row(
-                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                             children: const [
-                               Text(
-                                 '24 Jun, 2021',
-                                 style: TextStyle(
-                                     fontSize: 12
-                                 ),
-                               ),
-                               Text(' 12 minute read',style: TextStyle(
-                                   fontSize: 12
-                               ),)
-                             ],
-                           )
-                         ],
-                       ),
-                     ),
-                   ),
-                   Card(
-                     child:Padding(
-                       padding: const EdgeInsets.all(8.0),
-                       child: Column(
-                         children: [
-                           Image.asset('images/d.jpg'),
-                           const Padding(
-                             padding: EdgeInsets.all(5.0),
-                             child: Text('This is a man walking'),
-                           ),
-                           Row(
-                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                             children: const [
-                               Text(
-                                 '24 Jun, 2021',
-                                 style: TextStyle(
-                                     fontSize: 12
-                                 ),
-                               ),
-                               Text(
-                                 ' 12 minute read',
-                                 style: TextStyle(fontSize: 12),
+                   InkWell(
+                     onTap: (){
+                       Navigator.of(context).push(
+                         MaterialPageRoute(builder: (context) => const DetailsPage())
+                       );
+                     },
+                     child: Card(
+                       child:Padding(
+                         padding: const EdgeInsets.all(8.0),
+                         child: Column(
+                           children: [
+                             Image.asset('images/a.jpg'),
+                              Padding(
+                               padding: const EdgeInsets.all(5.0),
+                               child: GetBuilder<DataController>(builder: (_){
+                                 return Text(
+                                   "${dataController.newsModel!.title}",
+                                   overflow: TextOverflow.ellipsis,
+                                 );
+                               },
                                )
-                             ],
-                           )
-                         ],
+                             ),
+                             GetBuilder<DataController>(builder: (_){
+                               return  Text(
+                                 "${dataController?.newsModel!.time}",
+                                 style: const TextStyle(
+                                     fontSize: 12
+                                 ),
+                               );
+                             },
+                             )
+                           ],
+                         ),
                        ),
                      ),
-                   )
+                   ),
+                   const NewsCard(),
+                   const NewsCard(),
+                   const NewsCard(),
+                   const NewsCard(),
+                   const NewsCard()
                  ],
                ),
              ),
             ],
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class NewsCard extends StatelessWidget {
+  const NewsCard({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child:Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            Image.asset('images/c.jpg'),
+            const Padding(
+              padding: EdgeInsets.all(5.0),
+              child: Text('This is a man walking'),
+            ),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  '24 Jun, 2021',
+                  style: TextStyle(
+                      fontSize: 12
+                  ),
+                ),
+                Text(' 12 minute read',style: TextStyle(
+                    fontSize: 12
+                ),)
+              ],
+            )
+          ],
         ),
       ),
     );
