@@ -19,14 +19,14 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-
-  final dataController = Get.put(DataController());
   @override
   void initState() {
     dataController.getData();
     // TODO: implement initState
     super.initState();
   }
+
+  final dataController = Get.put(DataController());
 
   final _controller = ValueNotifier<bool>(false);
 
@@ -55,12 +55,8 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
 
-    if (dataController.newsModel == null){
-      return const Center(child: CircularProgressIndicator());
-    }
-
-    return GetMaterialApp(
-      home: Scaffold(
+    return Material(
+      child: Scaffold(
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.deepPurple,
@@ -153,7 +149,7 @@ class _HomePageState extends State<HomePage> {
                                padding: const EdgeInsets.all(5.0),
                                child: GetBuilder<DataController>(builder: (_){
                                  return Text(
-                                   "${dataController.newsModel!.title}",
+                                   dataController.newsModel!.title,
                                    overflow: TextOverflow.ellipsis,
                                  );
                                },

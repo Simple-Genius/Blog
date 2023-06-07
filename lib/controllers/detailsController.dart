@@ -17,7 +17,6 @@ class DetailsController extends GetxController{
     if (response.statusCode == 200) {
       var data = jsonDecode(response.body);
       detailsModel = DetailsModel.fromJson(data).obs as DetailsModel?;
-
     }
     else{
 
